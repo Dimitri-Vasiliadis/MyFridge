@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="resources/navbar.js"></script>
+    <link rel="stylesheet" href="resources/navbar.css">
+    <link rel="stylesheet" href="resources/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <title>MyFridge</title>
+  </head>
+<head>
+</head>
+  <body>
+    <div id="login">
+      <a href="/login">{{logon}}</a>
+    </div></br></br>
+    <h1>MyFridge</h1>
+    <div class="store_nav">
+      <div id="disappear_ul">
+        <div id="home">
+          <a href="">Home</a>
+        </div>
+        <div id="recipes">
+          <a href="/search">Recipes</a>
+        </div>
+        <div id="map">
+          <a href="/restaurants">Map</a>
+        </div>
+        <div id="about">
+          <a href="/about-us">About us</a>
+        </div>
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+    <div id="food_list">
+    </br>
+    <div id="fridgeC">
+      <h2 id="fridge">Refrigerator:</h2>
+      <div id="add">add item</div>
+    </div>
+      <div style="clear:both;"></div>
+      <div id="input">
+        <form action="">
+          <input type="submit" value="Submit">
+          <input name="ingredient" type="text">
+        </form>
+      </div>
+      <div id="items">
+        {%for item in fridge_items%}
+          <ul>
+            <li class="item_info">{{item}}</li>
+          </ul>
+        {%endfor%}
+      </div></br></br>
+      <div style="clear:both;"></div>
+    </div>
+    <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59838ceff1fd6d93"></script> 
+  </body>
+</html>
